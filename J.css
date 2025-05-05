@@ -1,0 +1,77 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4e1d2;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #ff6b81;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.emoji {
+    font-size: 3rem;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.emoji:hover {
+    transform: scale(1.2);
+}
+
+/* Rose Petal Effect */
+.petals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.petal {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: url('https://cdn.pixabay.com/photo/2017/08/30/23/24/rose-2696496_960_720.png') no-repeat center center;
+    background-size: cover;
+    animation: fall 3s infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Show I Love You */
+.message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #ff6b81;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 2s ease;
+}

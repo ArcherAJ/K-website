@@ -28,6 +28,7 @@ function generatePetals() {
         petal.addEventListener('animationend', () => {
             petal.remove();
         });
+        
     }
 }
 
